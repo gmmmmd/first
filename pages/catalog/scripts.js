@@ -1,0 +1,1 @@
+"use strict";var e=document.querySelector(".header__mobile-menu_js"),o=document.querySelector(".mobile-header_close_js"),c=document.querySelector(".mobile-header");e.addEventListener("click",function(){c.classList.add("mobile-header_open")}),o.addEventListener("click",function(){c.classList.remove("mobile-header_open")});

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header container">
+    <a href="/"><img class="header__logo" src="../../static/images/logo/mainlogo.svg" alt="logo" width="100" height="52"></a>
+    <nav class="header__nav">
+        <ul class="header__list dots_none">
+            <li class="header__item"><a href="../../pages/catalog/index.html">Catalog</a></li>
+            <li class="header__item"><a href="#">About Us</a></li>
+            <li class="header__item"><a href="../../pages/blog/index.html">Blog</a></li>
+            <li class="header__item"><a href="../../pages/animation/index.html">Animation</a></li>
+            <li class="header__item"><a href="../../pages/svg/index.html">SVG</a></li>
+            <li class="header__item"><a href="../../pages/grid/index.html">Grid</a></li>
+        </ul>
+        <ul class="header__list dots_none">
+            <li class="header__search"><button class="header__button" type="submit"><img src="../../static/images/button/btn-search.svg" alt="search" width="17" height="17"></button></li>
+            <li class="header__search"><a class="header__contact" href="../../pages/contacts/index.html">Contact Us</a></li>
+        </ul>         
+    </nav>
+    <button class="header__mobile-menu header__mobile-menu_js">Menu</button>
+    <button class="header__mobile-search" type="submit"><img class="header__img_search" src="../../static/images/button/btn-search.svg" alt="search" width="17" height="17"></button> 
+</header>
+
+<div class="mobile-header">
+    <div class="mobile-header__container">
+        <nav class="mobile-header__nav">
+            <a href="/">
+                <img class="mobile-header__logo" src="../../static/images/logo/mainlogo.svg" alt="logo">
+                <!-- <svg width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H7.60744C13.0705 0 16.9704 5.234 16.9704 10.1689V11.7333C16.9704 16.6681 13.0705 21.9022 7.60744 21.9022H0V0ZM15.8001 10.1689C15.8001 5.71711 12.271 1.17333 7.60744 1.17333H1.17037V20.7289H7.60744C12.271 20.7289 15.8001 16.1851 15.8001 11.7333V10.1689Z" fill="#1E0606"/>
+                    <path d="M19.5063 0H20.6766V20.8267H26.9186V22H19.5063V0Z" fill="#1E0606"/>
+                    <path d="M28.4791 0V21.9022H29.6495V11.5852L29.9368 11.2972L40.3571 21.9022H42L30.7644 10.4675L41.2055 0H39.5504L29.6495 9.92589V0H28.4791Z" fill="#1E0606"/>
+                </svg> -->
+            </a>
+            <button class="mobile-header_close mobile-header_close_js">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z" fill="#1E0606"/>
+                </svg>
+            </button>
+            <button class="mobile-header__search" type="submit">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.4678 0C5.9598 0 3.92113 2.068 3.92113 4.59067C3.92113 5.66133 4.2878 6.62934 4.88914 7.42134L0.577137 11.7773C0.327803 12.0413 0.327803 12.452 0.577137 12.7013C0.709137 12.8333 0.870471 12.892 1.0318 12.892C1.2078 12.892 1.36913 12.8333 1.50113 12.7013L5.81314 8.33067C6.56114 8.87334 7.47047 9.18134 8.45314 9.18134C10.9611 9.18134 12.9998 7.11334 12.9998 4.59067C13.0145 2.05333 10.9758 0 8.4678 0ZM8.4678 8.02267C6.60513 8.02267 5.09447 6.48267 5.09447 4.59067C5.09447 2.69867 6.60513 1.15867 8.4678 1.15867C10.3305 1.15867 11.8411 2.69867 11.8411 4.59067C11.8411 6.48267 10.3305 8.02267 8.4678 8.02267ZM10.7411 4.64934C10.7118 4.89867 10.4918 5.08934 10.2425 5.08934C10.2131 5.08934 10.1985 5.08934 10.1691 5.08934C9.89047 5.04534 9.6998 4.796 9.72914 4.51733C9.8318 3.75467 8.98114 3.35867 8.93714 3.344C8.6878 3.22667 8.57047 2.91867 8.6878 2.66934C8.80513 2.42 9.09847 2.30267 9.36247 2.40534C9.42113 2.42 10.9465 3.124 10.7411 4.64934ZM9.67047 5.764C9.77314 5.86667 9.84647 6.02801 9.84647 6.17467C9.84647 6.33601 9.7878 6.48267 9.67047 6.58534C9.5678 6.68801 9.40647 6.76134 9.2598 6.76134C9.11314 6.76134 8.9518 6.70267 8.84914 6.58534C8.74647 6.48267 8.67314 6.32134 8.67314 6.17467C8.67314 6.02801 8.7318 5.86667 8.84914 5.764C8.9518 5.66133 9.11314 5.58801 9.2598 5.58801C9.40647 5.58801 9.55314 5.64667 9.67047 5.764Z" fill="#1E0606"/>
+                </svg>
+            </button>
+        </nav>
+        <ul class="mobile-header__list dots_none">
+            <li class="mobile-header__item"><a href="../../pages/catalog/index.html">Catalog</a></li>
+            <li class="mobile-header__item"><a href="#">About Us</a></li>
+            <li class="mobile-header__item"><a href="../../pages/blog/index.html">Blog</a></li>
+            <li class="mobile-header__item"><a href="../../pages/animation/index.html">Animation</a></li>
+            <li class="mobile-header__item"><a href="../../pages/svg/index.html">SVG</a></li>
+            <li class="mobile-header__item"><a href="../../pages/grid/index.html">Grid</a></li>
+            <li class="mobile-header__item"><a class="mobile-header__contact" href="../../pages/contacts/index.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+    <main>
+        <section class="scene container">
+            <h1 class="scene__title">Grid</h1>
+            <div class="breadcrumb">
+    <a class="breadcrumb__link" href="/">Home</a>
+    <img class="breadcrumb__img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
+    <a class=" " href="/"> </a>
+    <img class="hidden" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
+    <p class="breadcrumb__text">Grid</p>
+</div>
+        </section>
+        <section class="container-grid">
+            <div class="grid">
+                <div class="grid__box grid__box_1 grid__content-1">
+                    <div class="grid__content-1_text">
+                        <span class="grid__content-1_title">IPhone 6S</span>
+                        <span class="grid__content-1_description">3D Touch. 12MP photos. 4K video. One powerful phone</span>
+                        <span class="grid__content-1_link" href="#">Learn more or visit an Apple Store today</span>
+                    </div>
+                    <picture class="grid__content-1_img">
+                        <source srcset="../../static/images/grid/smartfon-mobile.png, ../../static/images/grid/smartfon-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/smartfon.png, ../../static/images/grid/smartfon-2x.png">
+                        <img src="../../static/images/grid/smartfon.png" alt="iphone 6s">
+                    </picture>
+                </div>
+                <div class="grid__box grid__box_2 grid__content-2">
+                    <div class="grid__content-2_text">
+                        <a class="grid__content-2_link" href="#">Learn More</a>
+                        <span class="grid__content-2_title">How to Use Rotary Evaporator in Chemical Labs</span>
+                        <a class="grid__content-2_download" href="#">Download now</a>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_3 grid__content-3">
+                    <picture class="grid__content-3_img">
+                        <source srcset="../../static/images/grid/keyboard.png, ../../static/images/grid/keyboard2x.png 2x">
+                        <img src="../../static/images/grid/keyboard.png" alt="keyboard">
+                    </picture>
+                    <div class="grid__content-3_text">
+                        <span class="grid__content-3_title">Our Brand New Keyboard</span>
+                        <a class="grid__content-3_link" href="#">Learn ›</a>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_4 grid__content-4">
+                    <div class="grid__content-4_block-1">
+                        <span class="grid__content-4_title">IMac.Retina</span>
+                        <span class="grid__content-4_text">Hardly a month passes these days where</span>
+                    </div>
+                    <picture>
+                        <source srcset="../../static/images/grid/imac-mobile.jpg, ../../static/images/grid/imac-mobile-2x.jpg 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/imac-tablet.jpg, ../../static/images/grid/imac-tablet-2x.jpg 2x" media="(max-width: 1200px)">
+                        <source srcset="../../static/images/grid/imac.jpg, ../../static/images/grid/imac-2x.jpg 2x">
+                        <img src="../../static/images/grid/imac.jpg" alt="keyboard">
+                    </picture>
+                    
+                    <div class="grid__content-4_block-2">
+                        <span class="grid__content-4_description">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</span>
+                        <a class="grid__content-4_link" href="#">Download Now ›</a>
+                    </div>
+                    
+                </div>
+                <div class="grid__box grid__box_5 grid__content-5">
+                    <div class="grid__content-5_wrapper">
+                        <button class="button-violet"><span class="button-violet_text">Popular</span></button>
+                        <img src="../../static/images/grid/floppy.png" alt="floppy">
+                        <span class="grid__content-5_meet">Meet</span>
+                    </div>
+                    <div class="grid__content-5_text">
+                        <span class="grid__content-5_title">iCloud</span>
+                        <span class="grid__content-5_description">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</span>
+                        <button class="button-yellow"><span class="button-yellow_text">Learn More</span></button>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_6 grid__content-6">
+                    <div class="grid__content-6_wrapper">Best Choise</div>
+                    <span class="grid__content-6_title">Much MuchBetter Experience</span>
+                    <picture class="grid__content-6_img">
+                        <source srcset="../../static/images/grid/tablet-mobile.png, ../../static/images/grid/tablet-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/tablet-tablet.png, ../../static/images/grid/tablet-tablet2x.png 2x" media="(max-width: 1200px)">
+                        <source srcset="../../static/images/grid/tablet.png, ../../static/images/grid/tablet2x.png 2x">
+                        <img src="../../static/images/grid/tablet.png" alt="keyboard">
+                    </picture>
+                </div>
+                <div class="grid__box grid__box_7 grid__content-7">
+                    <picture class="grid__content-7_img">
+                        <source srcset="../../static/images/grid/gamepad.png, ../../static/images/grid/gamepad-2x.png 2x">
+                        <img src="../../static/images/grid/gamepad.png" alt="gamepad">
+                    </picture>
+                    <span class="grid__content-7_title">Games ourpasion</span>
+                    <a class="grid__content-7_link" href="#">Learn ›</a>
+                </div>
+                <div class="grid__box grid__box_8 grid__content-8">
+                    <img class="grid__content-8_img" src="../../static/images/grid/instagram-icon.svg" alt="instagram">
+                    <a class="grid__content-8_link" href="#">Follow me ›</a>
+                </div>
+                <div class="grid__box grid__box_9 grid__content-9">
+                    <picture class="grid__content-9_img">
+                        <source srcset="../../static/images/grid/tv-mobile.png, ../../static/images/grid/tv-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/tv.png, ../../static/images/grid/tv-2x.png 2x">
+                        <img src="../../static/images/grid/tv.png" alt="keyboard">
+                    </picture>
+                    
+                    <span class="grid__content-9_text">More than just a display,  it’s a vision</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="footer__main container">
+        <div class="footer__main_wrapper">
+            <p class="footer__title wrapper__navigation">Navigation</p>
+                <ul class="footer__nav dots_none">
+                    <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
+                    <li class="footer__item"><a class="footer__link" href="../../pages/blog/index.html">Blog</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Design Services</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Featured On</a></li>
+                    <li class="footer__item"><a class="footer__link" href="../../pages/catalog/index.html">2018 Holiday Catalog</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Shop By Designer</a></li>
+                </ul>
+        </div> 
+        <div class="footer__main_wrapper">
+            <p class="footer__title wrapper__information">Customer Information</p>
+            <ul class="footer__nav dots_none">
+                <li class="footer__item"><a class="footer__link" href="../../pages/contacts/index.html">Contact Us</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Sale Exclusions</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Shipping & Returns</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Terms & Conditions</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Search</a></li>
+            </ul>
+        </div>        
+        <div class="footer__main_wrapper">
+            <p class="footer__title wrapper__connect">Connect</p>
+            <div>
+                <div class="footer__nav">
+                    <form action="#" method="POST" class="footer__subscribe">
+                        <label for="subscribe_email"></label>
+                        <input id="subscribe_email" type="email" name="user_email" placeholder="Email" class="footer__mail">
+                        <button class="button @@class" type="submit">Join</button>
+                    </form>                
+                </div>
+                <div>
+                    <ul class="social dots_none">
+                        <li class="social__item"><a href="#"><img src="../../static/images/logo/facebook.svg" alt="facebook" width="30" height="30"></a></li>
+                        <li class="social__item"><a href="#"><img src="../../static/images/logo/twitter.svg" alt="twitter" width="30" height="30"></a></li>
+                        <li class="social__item"><a href="#"><img src="../../static/images/logo/pinterest.svg" alt="pinterest" width="30" height="30"></a></li>
+                        <li class="social__item"><a href="#"><img src="../../static/images/logo/instagram.svg" alt="instagram" width="30" height="30"></a></li>
+                    </ul>
+                </div>
+            </div>                
+        </div> 
+    </div>
+    <div class="footer__bottom container">
+        <div class="footer__wrapper">
+            <div class="footer__company-rating">
+                <p class="footer__text">Company Rating</p>
+                <div class="footer__rating">
+                    <input class="footer__rating_input" type="radio" name="star" id="star-1" value="1">
+                    <label class="footer__rating_label" for="star-1" aria-label="one star"></label>
+                    <input class="footer__rating_input" type="radio" name="star" id="star-2" value="2">
+                    <label class="footer__rating_label" for="star-2" aria-label="two star"></label>
+                    <input class="footer__rating_input" type="radio" name="star" id="star-3" value="3">
+                    <label class="footer__rating_label" for="star-3" aria-label="three star"></label>
+                    <input class="footer__rating_input" type="radio" name="star" id="star-4" value="4">
+                    <label class="footer__rating_label" for="star-4" aria-label="four star"></label>
+                    <input class="footer__rating_input" type="radio" name="star" id="star-5" value="5">
+                    <label class="footer__rating_label" for="star-5" aria-label="five star"></label>
+                </div> 
+            </div>
+            <div class="footer__info">
+                <p class="footer__license">Copyright © 2018 Dlk • Design Life Kids</p>
+                <a class="footer__production" href="#">Web Design — Direct Line Development</a>
+            </div>
+        </div>
+    </div>        
+</footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
